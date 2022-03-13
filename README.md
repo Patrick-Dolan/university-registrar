@@ -51,18 +51,6 @@ Example of complete appsettings.json:
 <code>dotnet restore</code>  
 * Run tests by going to the test project in the terminal (UniversityRegistrar.Solution/UniversityRegistrar.Tests) and running the following command:  
 <code>dotnet test</code>  
-<br>--TEMPLATE INSTRUCTIONS DELETE FOLLOWING AFTER SETUP--  
-[Resource on how to build/use this template](https://www.learnhowtoprogram.com/c-and-net-part-time/test-driven-development-with-c/mstest-configuration-quick-reference)
-* In Startup.cs change UniversityRegistrar for database class name in configurationServices class.  
-Example: <code>.AddDbContext<UniversityRegistrarContext\></code> changed to <code>.AddDbContext<ToDoListContext\></code>
-* In UniversityRegistrarContext.cs model the DbSet type and name should be renamed to what the table in the database represents.
-* <strong>Make sure to rename UniversityRegistrar & ClassName in UniversityRegistrar.Tests to match those in the UniversityRegistrar directory tree.</strong>  
-* Rename the UniversityRegistrar in the following files for use: UniversityRegistrar in all folder its included in, Homecontroller.cs, ClassName.cs, PageName.cshtml, Program.cs,UniversityRegistrarContext.cs, and Startup.cs.
-* Once everything is renamed and can build navigate into the production folder <code>UniversityRegistrar/UniversityRegistrar/</code> and run the following command to make the initial migrations directory: <br>
-<code>dotnet ef migrations add Initial</code>
-
-<br>
-* When renaming project files for new project make sure to rename all fields with "UniversityRegistrar" as the directory/file name. This includes line 13 of "UniversityRegistrar.Tests.csproj" to the names of your directories. 
 
 ## Known Bugs
 
