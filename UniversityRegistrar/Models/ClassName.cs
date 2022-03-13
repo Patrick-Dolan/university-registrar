@@ -1,4 +1,4 @@
-namespace ProjectName.Models
+namespace UniversityRegistrar.Models
 {
   public class ClassName
   {
