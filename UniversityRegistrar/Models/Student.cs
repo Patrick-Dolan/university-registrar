@@ -1,6 +1,6 @@
 namespace UniversityRegistrar.Models
 {
-  public class ClassName
+  public class Student
   {
     
   }
