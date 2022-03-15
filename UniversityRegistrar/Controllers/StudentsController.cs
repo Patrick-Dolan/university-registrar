@@ -29,6 +29,21 @@ namespace UniversityRegistrar.Controllers
     {
       _db.Students.Add(student);
       _db.SaveChanges();
+      //TODO add setup for many to many connection for courses
+      return RedirectToAction("Index");
+    }
+
+    public ActionResult Edit(int id)
+    {
+      Student foundStudent = _db.Students.FirstOrDefault(student => student.StudentId == id);
+      return View(foundStudent);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Student student)
+    {
+      _db.Entry(student).State = EntityState.Modified;
+      _db.SaveChanges();
       return RedirectToAction("Index");
     }
   }
