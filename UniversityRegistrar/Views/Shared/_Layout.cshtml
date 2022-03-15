@@ -9,6 +9,17 @@
   <body>
     <div class="container">
       <h1>University Registrar</h1>
+      <ul class="nav">
+        <li class="nav-item">
+          @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link"})
+        </li>
+        <li class="nav-item">
+          @Html.ActionLink("Students", "Index", "Students", null, new { @class = "nav-link"})
+        </li>
+        <li class="nav-item">
+          @Html.ActionLink("Course", "Index", "Course", null, new { @class = "nav-link disabled"})
+        </li>
+      </ul>
       <hr>
       @RenderBody()
     </div>
