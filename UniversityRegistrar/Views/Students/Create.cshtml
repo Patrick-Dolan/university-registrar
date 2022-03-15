@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@model UniversityRegistrar.Models.Student
+
+<h2> Enroll a new student</h2>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)
+
+  @Html.LabelFor(model => model.DateOfEnrollment)
+  @Html.TextBoxFor(model => model.DateOfEnrollment)
+
+
+  <input type="submit" value="Save" class="btn btn-default" />
+}

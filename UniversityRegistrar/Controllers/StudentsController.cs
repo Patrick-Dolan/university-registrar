@@ -18,5 +18,18 @@ namespace UniversityRegistrar.Controllers
     {
       return View(_db.Students.ToList());
     }
+
+    public ActionResult Create()
+    {
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult Create(Student student)
+    {
+      _db.Students.Add(student);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
