@@ -26,23 +26,32 @@ namespace UniversityRegistrar.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Student student)
+    public ActionResult Create(Student student, int CourseId)
     {
       _db.Students.Add(student);
       _db.SaveChanges();
-      //TODO add setup for many to many connection for courses
+      if (CourseId != 0)
+      {
+        _db.CourseStudents.Add(new CourseStudent() {CourseId = CourseId, StudentId = student.StudentId});
+        _db.SaveChanges();
+      }
       return RedirectToAction("Index");
     }
 
     public ActionResult Edit(int id)
     {
       Student foundStudent = _db.Students.FirstOrDefault(student => student.StudentId == id);
+      ViewBag.CourseId = new SelectList(_db.Courses, "CourseId", "Name");
       return View(foundStudent);
     }
 
     [HttpPost]
-    public ActionResult Edit(Student student)
+    public ActionResult Edit(Student student, int CourseId)
     {
+      if (CourseId != 0)
+      {
+        _db.CourseStudents.Add(new CourseStudent() {CourseId = CourseId, StudentId = student.StudentId});
+      }
       _db.Entry(student).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");
