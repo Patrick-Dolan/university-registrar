@@ -6,6 +6,8 @@
 
 <h2>Course Details</h2>
 <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
+<p><strong>Course number: </strong>@Html.DisplayFor(model => model.Number)</p>
+
 
 @if(@Model.JoinEntities.Count == 0)
 {
