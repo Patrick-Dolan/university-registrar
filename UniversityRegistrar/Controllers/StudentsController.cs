@@ -21,6 +21,7 @@ namespace UniversityRegistrar.Controllers
 
     public ActionResult Create()
     {
+      ViewBag.CourseId = new SelectList(_db.Courses, "CourseId", "Name");
       return View();
     }
 
