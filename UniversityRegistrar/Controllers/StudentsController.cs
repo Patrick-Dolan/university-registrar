@@ -80,5 +80,7 @@ namespace UniversityRegistrar.Controllers
         .FirstOrDefault(student => student.StudentId == id);
       return View(foundStudent);
     }
+
+    //TODO Add "addCourse" get and post & "deleteCourse
   }
 }
