@@ -54,7 +54,7 @@ Example of complete appsettings.json:
 
 ## Known Bugs
 
-* _No known issues_
+* _Add category system on student details page currently throws an error._
 
 ## Contact Me
 
