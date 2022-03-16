@@ -41,5 +41,19 @@ namespace UniversityRegistrar.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    public ActionResult Edit(int id)
+    {
+      Course thisCourse = _db.Courses.FirstOrDefault(course => course.CourseId == id);
+      return View(thisCourse);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Course course)
+    {
+      _db.Entry(course).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
