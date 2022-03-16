@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+@model UniversityRegistrar.Models.Course
+
+<h2>Delete</h2>
+
+<h4>Delete this course: @Html.DisplayFor(model => model.Name)</h4>
+<p><strong>Course number: </strong>@Html.DisplayFor(model => model.Number)</p>
+
+
+@using (Html.BeginForm())
+{
+  <input type="submit" value="Delete" class="btn btn-danger" />
+}
