@@ -8,19 +8,22 @@
   </head>
   <body>
     <div class="container">
-      <h1>University Registrar</h1>
-      <ul class="nav">
-        <li class="nav-item">
-          @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link"})
-        </li>
-        <li class="nav-item">
-          @Html.ActionLink("Students", "Index", "Students", null, new { @class = "nav-link"})
-        </li>
-        <li class="nav-item">
-          @Html.ActionLink("Courses", "Index", "Courses", null, new { @class = "nav-link"})
-        </li>
-      </ul>
-      <hr>
+      <div class="row" id="header">
+        <div class="col">
+          <h1>University Registrar</h1>
+        </div>
+      </div>
+        <ul class="nav row">
+          <li class="nav-item">
+            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link"})
+          </li>
+          <li class="nav-item">
+            @Html.ActionLink("Students", "Index", "Students", null, new { @class = "nav-link"})
+          </li>
+          <li class="nav-item">
+            @Html.ActionLink("Courses", "Index", "Courses", null, new { @class = "nav-link"})
+          </li>
+        </ul>
       @RenderBody()
     </div>
   </body>
