@@ -5,6 +5,9 @@
 @model UniversityRegistrar.Models.Course;
 
 <h2>Course Details</h2>
+
+<hr>
+
 <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
 <p><strong>Course number: </strong>@Html.DisplayFor(model => model.Number)</p>
 
@@ -15,7 +18,7 @@
 }
 else
 {
-  <h4>Students the courses contains:</h4>
+  <h4>Students enrolled in course:</h4>
   <ul>
   @foreach(var join in Model.JoinEntities)
   {
