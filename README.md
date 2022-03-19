@@ -13,7 +13,10 @@
 
 ## Description
 
-A university registrar used to keep track of students and courses.
+A university registrar used to keep track of students and courses. You can do the following operations: 
+* Add remove and edit student information into the system
+* Add remove and edit course information into the system
+* Assign students to courses
 
 ## Setup/Installation Requirements
 
